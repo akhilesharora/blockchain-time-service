@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Time Service</title>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 500px;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #007bff;
+        }
+        p {
+            color: #6c757d;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        button:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #networkDisplay, #timeDisplay {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #28a745;
+        }
+        .error {
+            margin-top: 20px;
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Blockchain Time Service</h2>
+        <p>Connect to MetaMask to view the current network and pay 0.01 USDC to display the current time.</p>
+        <button id="connectButton">Connect to MetaMask</button>
+        <button id="payButton" disabled>Pay 0.01 USDC to Display Time</button>
+        <div id="networkDisplay"></div>
+        <div id="timeDisplay"></div>
+        <div class="error" id="errorMessage"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
